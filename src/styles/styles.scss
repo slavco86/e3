@@ -27,6 +27,7 @@ body {
     font-size: 64px;
   }
   p {
+    margin-top: 10px;
     font-family: $text;
     font-size: 25px;
     color: rgba(255, 255, 255, 0.6)
@@ -47,6 +48,7 @@ body {
 }
 
 .button {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -59,9 +61,30 @@ body {
   color: white;
   border: none;
   border-radius: 5px;
+  transition: color .5s, background-color .5s;
 
-  img {
+  &:hover {
+    color: #2c2d32;
+    background-color: white;
+
+    svg {
+      stop:first-child {
+        stop-color: #7AC9FA;
+      }
+      stop:last-child {
+        stop-color: #7A6AF1;
+      }
+
+    }
+  }
+
+  svg {
     margin-right: 20px;
+
+    stop {
+      transition: stop-color .5s;
+    }
+
   }
 }
 
