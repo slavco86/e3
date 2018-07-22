@@ -142,8 +142,8 @@ body {
       display: flex;
     }
     .button {
-      width: 95px;
-      height: 45px;
+      width: 90px;
+      height: 40px;
       background-color: #6a64de;
 
       &:hover {
@@ -162,18 +162,31 @@ body {
   text-align: center;
   margin-top: 3rem;
 
+  @media only screen and (max-width: 750px){
+    margin-top: 1rem;
+  }
+
   h1 {
     max-width: 50%;
     margin: 0 auto;
     font-family: $title;
     font-weight: 700;
     font-size: 64px;
+
+    @media only screen and (max-width: 750px){
+      font-size: 32px;
+      max-width: 80%;;
+    }
   }
   p {
     margin-top: 10px;
     font-family: $text;
     font-size: 25px;
-    color: rgba(255, 255, 255, 0.6)
+    color: rgba(255, 255, 255, 0.6);
+
+    @media only screen and (max-width: 750px){
+      font-size: 12px;
+    }
   }
 }
 
