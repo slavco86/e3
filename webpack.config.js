@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Hot Module Replacement',
+      title: 'E3',
       template: './index.html'
     }),
     new webpack.HotModuleReplacementPlugin()

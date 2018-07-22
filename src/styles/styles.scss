@@ -49,15 +49,6 @@ body {
     padding: 5px 20px;
     cursor: pointer;
   }
-
-  .create {
-    &::before {
-      content: "";
-      background-image: url('../assets/png/profile.png');
-      width: 100%;
-      height: 100%;
-    }
-  }
 }
 
 .header .select {
@@ -273,3 +264,130 @@ body {
   transform: rotate(-45deg);
   transition: transform .5s, height .5s, width .5s;
 }
+
+.content-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 750px){
+    flex-direction: column;
+  }
+}
+
+.content-left {
+  flex: 0 0 40%;
+  padding: 0 4rem;
+  align-self: flex-start;
+  margin-top: 10rem;
+
+  @media only screen and (max-width: 750px){
+    margin-top: 0;
+  }
+
+  .title {
+    font-family: $title;
+    font-size: 38px;
+    font-weight: bold;
+  }
+
+  .text {
+    text-align: left;
+    font-family: $text;
+    font-size: 18px;
+    text-transform: none;
+    color: #2c2d32;
+  }
+
+  .buttons-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 0;
+
+    &:hover button::after {
+      width: 100%;
+    }
+
+    &:hover .chevron {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .chevron {
+    border-color: #6a64de;
+    margin-right: 2rem;
+  }
+
+  button {
+    border: none;
+    color: #6a64de;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      border-bottom: solid #6a64de 2px;
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-top: 1.5rem;
+      transform: translate3d(-50%, 0, 0);
+      width: 0;
+      transition: width .5s ease-out;
+    }
+  }
+}
+
+.content-right{
+  flex: 0 0 50%;
+  position: relative;
+  .picture {
+    margin-left: 2rem;
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 1rem;
+      font-family: $title;
+      font-weight: bold;
+      font-size: 30px;
+      color: white;
+    }
+
+    &--big {
+      width: 80%;
+
+      @media only screen and (max-width: 750px){
+        margin: 0 auto;
+      }
+    }
+    &--small {
+      padding: 0;
+      position: absolute;
+      left: -5rem;
+      bottom: -2rem;
+
+      @media only screen and (max-width: 750px){
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+
