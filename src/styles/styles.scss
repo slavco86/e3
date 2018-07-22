@@ -277,7 +277,7 @@ body {
 }
 
 .content-left {
-  flex: 0 0 40%;
+  flex: 0 0 37%;
   padding: 0 4rem;
   align-self: flex-start;
   margin-top: 10rem;
@@ -375,8 +375,8 @@ body {
     &--small {
       padding: 0;
       position: absolute;
-      left: -5rem;
-      bottom: -2rem;
+      left: -10rem;
+      bottom: -3rem;
 
       @media only screen and (max-width: 750px){
         position: relative;
