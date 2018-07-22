@@ -8,6 +8,79 @@ body {
   margin: 0;
 }
 
+.header {
+  background-color: #716be7;
+  color: white;
+  font-family: $text;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  label {
+    margin-left: 15px;
+  }
+}
+
+.left {
+  form {
+    margin: 0;
+  }
+
+  .chevron {
+    transform: rotate(135deg);
+    margin: 0;
+  }
+
+  &:hover .chevron {
+    transform: rotate(-45deg);
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-left: solid rgba(255, 255, 255, 0.286) 1px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+
+  .create {
+    &::before {
+      content: "";
+      background-image: url('../assets/png/profile.png');
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.header .select {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  width: 70px;
+  color: white;
+  padding: 5px;
+  border-right: solid rgba(255, 255, 255, 0.286) 1px;
+  border-radius: 0;
+  cursor: pointer;
+
+  &:last-child {
+    width: 50px;
+  }
+}
+
 .overlay {
   background: linear-gradient(210deg, #7a6af1, #7ac9fa);
   width: 100%;
@@ -43,7 +116,7 @@ body {
 }
 
 .main-banner-container {
-  height: 100vh;
+  height: calc(100vh - 23px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
