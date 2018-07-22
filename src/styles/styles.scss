@@ -300,23 +300,22 @@ body {
     text-transform: none;
     color: #2c2d32;
   }
+}
 
-  .buttons-container {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 2rem 0;
+.buttons-container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 2rem 0;
 
-    &:hover button::after {
-      width: 100%;
-    }
-
-    &:hover .chevron {
-      width: 18px;
-      height: 18px;
-    }
+  &:hover button::after {
+    width: 100%;
   }
 
+  &:hover .chevron {
+    width: 18px;
+    height: 18px;
+  }
   .chevron {
     border-color: #6a64de;
     margin-right: 2rem;
@@ -611,5 +610,17 @@ body {
 .nav-prev {
   .chevron {
     transform: rotate(135deg);
+  }
+}
+
+.carousel-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7rem;
+
+  .text {
+    color: #6a64de;
   }
 }
