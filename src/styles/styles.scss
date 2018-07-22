@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700|Roboto');
+@import url('./../../node_modules/swiper/dist/css/swiper.min.css');
 
 $text: 'Roboto', serif;
 $title: 'Montserrat';
@@ -396,7 +397,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: solid 1px;
+  border: solid 1px #b1b4c3;
+  border-radius: 5px;
   width: 27%;
   margin: 0 auto;
 }
@@ -419,6 +421,16 @@ body {
   color: white;
   padding: 1rem;
   margin-left: 10px;
+  font-family: $title;
+
+  @media only screen and (max-width: 750px){
+    padding: .5rem;
+  }
+
+  .title {
+    text-transform: none;
+    color: white;
+  }
 
   span {
     display: block;
@@ -427,16 +439,34 @@ body {
 }
 
 .info {
-  border-bottom: solid 1px;
-  padding: 1rem;
+  border-bottom: solid 1px #b1b4c3;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 100%;
+
+  .subtitle {
+    font-family: $text;
+    margin-top: 1rem;
+  }
 }
 
 .title {
   display: flex;
   align-items: center;
+  margin-left: 1rem;
+  color: #b1b4c3;
+  text-transform: uppercase;
+  font-family: $title;
+
+  svg {
+    margin-right: 1rem;
+  }
+}
+
+.subtitle {
+  margin-left: 1rem;
 }
 
 .details,
@@ -446,13 +476,21 @@ body {
   width: 100%;
   padding: 1rem 0;
   padding-top: 3rem;
-  border-bottom: solid 1px;
+  border-bottom: solid 1px #b1b4c3;
+  font-family: $text;
+}
+
+.price {
+  text-transform: uppercase;
 }
 
 .out,
 .in,
 .passengers {
   position: relative;
+  color: #b1b4c3;
+  width: 30%;
+  text-align: center;
   &::before {
     background-image: url('./../assets/png/Out.png');
     display: block;
@@ -462,7 +500,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     top: -2.3rem;
-    left: 50%;
+    left: 40%;
   }
 }
 
@@ -475,7 +513,6 @@ body {
 .passengers {
   &::before {
     background-image: url('./../assets/png/Passengers.png');
-    left: 30%;
   }
 }
 
@@ -495,22 +532,84 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 55%;
   margin-right: 1rem;
+
   a {
     text-decoration: none;
+    border: solid transparent 3px;
     border-radius: 5px;
     width: 86px;
     height: 32px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #6a64de;
     color: white;
+    transition: background-color .5s, color .5s, border-color .5s;
+
+    @media only screen and (max-width: 750px){
+      font-size: 10px;
+      width: 55 px;
+    }
   }
 
   .offer {
     background-color: #7ab4f8;
+
+    &:hover {
+      background-color: transparent;
+      color: #6a64de;
+      border-color: #7ab4f8;
+    }
+  }
+
+  .buynow {
+    background-color: #6a64de;
+
+    &:hover {
+      background-color: transparent;
+      color: #6a64de;
+      border-color: #6a64de;
+    }
   }
 }
 
+.nav-prev,
+.nav-next {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.668);
+
+  .block {
+    background-color: #6a64de;
+    height: 200px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 750px){
+      width: 50px;
+    }
+  }
+
+  .chevron {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.nav-next {
+  right: 0;
+}
+
+.nav-prev {
+  .chevron {
+    transform: rotate(135deg);
+  }
+}
