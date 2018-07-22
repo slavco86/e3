@@ -193,13 +193,26 @@ body {
 nav.buttons-container {
   max-width: 80%;
   margin-top: 2rem;
+
+  @media only screen and (max-width: 750px){
+  margin-top: 1rem;
+  max-width: 100%;
+  }
 }
 
 .buttons-container__inner {
-display: flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  .button {
+    @media only screen and (max-width: 750px){
+      justify-content: space-between;
+      width: 170px;
+      height: 50px;
+    }
+  }
 }
 
 .button {
