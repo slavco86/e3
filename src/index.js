@@ -18,4 +18,5 @@ var carousel = new Swiper('.swiper-container', {
     prevEl: '.nav-prev',
   },
   grabCursor: true,
+  parallax: true,
 });

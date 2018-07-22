@@ -118,6 +118,11 @@ body {
     width: 100%;
     height: auto;
     display: block;
+
+    @media only screen and (max-width: 750px){
+      height: 100%;
+      width: auto;
+    }
   }
 }
 
@@ -319,6 +324,7 @@ nav.buttons-container {
 
   @media only screen and (max-width: 750px){
     flex-direction: column;
+    height: auto;
   }
 }
 
@@ -330,12 +336,16 @@ nav.buttons-container {
 
   @media only screen and (max-width: 750px){
     margin-top: 0;
+    padding: 0 1rem;
   }
 
   .title {
     font-family: $title;
     font-size: 38px;
     font-weight: bold;
+    @media only screen and (max-width: 750px){
+      font-size: 30px;
+    }
   }
 
   .text {
@@ -356,6 +366,10 @@ nav.buttons-container {
     margin: 0;
     padding: 2rem 0;
 
+    @media only screen and (max-width: 750px){
+      width: 120px;
+    }
+
     &:hover button::after {
       width: 100%;
     }
@@ -367,6 +381,10 @@ nav.buttons-container {
     .chevron {
       border-color: #6a64de;
       margin-left: 2rem;
+
+      @media only screen and (max-width: 750px){
+        margin-left: 0;
+      }
     }
 
     button {
@@ -375,6 +393,7 @@ nav.buttons-container {
       font-size: 14px;
       cursor: pointer;
       position: relative;
+      background-color: transparent;
 
       &::after {
         border-bottom: solid #6a64de 2px;
@@ -449,6 +468,7 @@ nav.buttons-container {
   border-radius: 5px;
   width: 27%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .image {
@@ -598,7 +618,7 @@ nav.buttons-container {
 
     @media only screen and (max-width: 750px){
       font-size: 10px;
-      width: 55 px;
+      width: 55px;
     }
   }
 
@@ -674,7 +694,12 @@ nav.buttons-container {
   align-items: center;
   padding: 0 7rem;
 
+  @media only screen and (max-width: 750px){
+    padding: 0 1rem;
+  }
+
   .text {
     color: #6a64de;
+    margin-bottom: 0;
   }
 }
