@@ -475,10 +475,18 @@ nav.buttons-container {
 
 .carousel-section .swiper-container {
   overflow: visible;
+
+  @media only screen and (max-width: 750px){
+  overflow: hidden;
+  }
 }
 
 .swiper-slide-active.card {
   transform: translate3d(0, -3rem, 0);
+
+  @media only screen and (max-width: 750px){
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .image {
@@ -561,6 +569,11 @@ nav.buttons-container {
 
 .price {
   text-transform: uppercase;
+}
+
+.overflow {
+  overflow: hidden;
+  width: 100%
 }
 
 .out,

@@ -1,4 +1,4 @@
-import './../index.html';
+// import './../index.html';
 import './styles/styles.scss';
 import Swiper from 'swiper';
 
